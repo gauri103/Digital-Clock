@@ -1,12 +1,58 @@
-# React + Vite
+⏰ Digital Clock Web Application
+This is a React-based Digital Clock Web Application that combines three main features in a webpage:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Digital Clock – Displays the current system time in real-time.
+Timer – Allows users to set a countdown timer with start, pause, and reset controls.
+Stopwatch – Provides start, stop and reset functionalities for tracking time intervals.
 
-Currently, two official plugins are available:
+The project demonstrates the use of React Hooks such as useState, useRef, and useEffect for managing state, side effects, and DOM references efficiently.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
+Digital Clock:
+Updates automatically with the current system time.
+Uses useEffect to update every second.
 
-## Expanding the ESLint configuration
+Timer:
+Set a custom countdown.
+Start, pause, and reset options.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Stopwatch:
+Start/stop/reset functionality.
+
+🛠️ React Hooks Used
+
+useState - Manages states such as current time, timer value, stopwatch running status, and laps.
+Example: const [time, setTime] = useState(new Date());
+
+useEffect - Handles side effects like updating the clock every second or running the timer countdown.
+Example: Updating the digital clock with setInterval inside useEffect.
+
+useRef
+Stores the interval IDs for the timer and stopwatch without causing re-renders.
+Example: const timerRef = useRef(null);
+
+📂 Project Structure
+digital-clock-app/
+│-- src/
+│   │-- components/
+│   │   ├── DigitalClock.js
+│   │   ├── Timer.js
+│   │   ├── Stopwatch.js
+│   │-- App.js
+│   │-- index.js
+│-- public/
+│-- package.json
+│-- README.md
+
+⚡ Getting Started
+1. Clone the Repository
+git clone https://github.com/your-username/digital-clock-app.git
+cd digital-clock-app
+2. Install Dependencies
+npm install
+3. Run the Application
+npm start
+The app will run on http://localhost:3000/ 🎉
+
+📝 License
+This project is open-source and available under the MIT License.
